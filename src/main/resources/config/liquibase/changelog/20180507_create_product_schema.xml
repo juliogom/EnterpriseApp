@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+                        
+	<changeSet id="20180227191309-1" author="Julio Gomez">
+	        <createTable tableName="product" remarks="A table to contain all products">
+	        
+	            <column name="id" type="int" autoIncrement="${autoIncrement}">
+	                <constraints primaryKey="true" nullable="false"/>
+	            </column>
+	            
+	            <column name="name" type="varchar(255)">
+	                <constraints nullable="true" />
+	            </column>
+	
+	            <column name="price" type="bigint">
+	                <constraints nullable="true" />
+	            </column>
+	
+	            <column name="quantity" type="bigint">
+	                <constraints nullable="true" />
+	            </column>
+	
+	        </createTable>
+	        
+	    </changeSet>
+    </databaseChangeLog>

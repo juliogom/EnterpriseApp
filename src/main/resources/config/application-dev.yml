@@ -1,0 +1,7 @@
+spring:
+    profiles:
+        active: dev
+        include: swagger
+
+liquibase:
+    spring.contexts: dev
